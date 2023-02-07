@@ -1,0 +1,22 @@
+.container{
+  display: flex;
+}
+
+/* 자식 */
+.container > .box{
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  background-color: green;
+  transition: 1s;
+}
+
+/* before */
+.container .box::before{
+  content: "before";
+}
+
+/* after */
+.container .box::after{
+  content: "after";
+}

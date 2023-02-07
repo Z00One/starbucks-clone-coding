@@ -1,0 +1,21 @@
+.container{
+  display: flex;
+}
+
+.container *{
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  background-color: green;
+  transition: 1s;
+}
+
+/* 부정 선택자 */
+.container :not(.box1){
+  background-color: chartreuse;
+}
+
+/* 속성 선택자 */
+.container [class="box2"]{
+  background-color: deeppink;
+}

@@ -1,0 +1,14 @@
+.parent{
+  /* 자동 상속 */
+  width: 100px;
+  height: 100px;
+  font-size: 30px;
+}
+
+.parent *{
+  background-color: green;
+  margin: 10px;
+  
+  /* 강제 상속 */
+  width: inherit;
+  height: inherit;}

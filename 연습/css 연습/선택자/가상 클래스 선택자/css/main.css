@@ -1,0 +1,72 @@
+.container{
+  display: flex;
+}
+
+/* 자식 */
+.container > .box{
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  background-color: green;
+  transition: 1s;
+}
+
+/* 후손 */
+.container #sixth{
+  background-color: aqua;
+}
+
+/* 일치 */
+.box#sixth{
+  background-color: blueviolet;
+}
+
+/* 인접 형제 */
+#second + .box{
+  background-color: orange;
+}
+
+/* 일반 형제 */
+/* #second ~ .box{
+  background-color: orange;
+} */
+
+/* 가상 클래스 */
+/* .box에 대해서만 적용
+   후에 적용된 속성이 있을 경우 이전의 속성은 시각화 되지 않고 덮힌다? 
+   NO --> 선택자의 명시도에 따라 적용되는 속성값이 다르다.*/
+.box:hover{
+  width: 200px;
+  background-color: black;
+}
+
+#sixth:active{ 
+  height: 200px;
+  background-color: black;
+}
+
+.box:focus{
+  width: 400px;
+}
+
+/* 하위요소 선택 */
+
+/* 첫 번째 자식 요소 */
+.container .box:first-child{
+  height: 200px;
+}
+
+/* 마지막 번째 자식 요소 */
+.container *:last-child{
+  height: 200px;
+}
+
+/* n번째 자식 요소 */
+.container .box:nth-child(3){
+  height: 200px;
+}
+
+/* 부정 선택자 */
+.container :not(.box){
+  height: 100px;
+}
