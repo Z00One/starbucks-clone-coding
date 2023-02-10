@@ -9,27 +9,33 @@
 .container div:nth-child(1) {
   /* Hexdecimal */
   background-color: #990b0b;
-
+  
   /* margin */
   margin: 10px 20px 30px;
-
+  
   /* border */
   border: 3px solid rgb(255, 127, 63);
+
+  /* box-sizing */
+  box-sizing: border-box;
 }
 
 /* 두 번째 */
 .container div:nth-child(2) {
   /* rgba (r, g, b, tranparent) */
   background-color: rgba(24, 240, 24, 0.5);
-
+  
   /* padding */
   padding: 10vw 10%;
   
-  transition: 2s;
+  transition: 1s;
 }
 
 /* active */
 .container div:nth-child(2):active {
-  /* border-radius - make to circle*/
+  /* border-radius - make to circle */
   border-radius: 100% 0;
+
+  /* box-sizing */
+  box-sizing: content-box;
 }
