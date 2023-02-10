@@ -1,0 +1,48 @@
+.parent {
+  width: 500px;
+  height: 500px;
+
+  /* overflow */
+  overflow-x: hidden;
+  /* 개별 속성을 설정해주면(기본값이 아닌 값) 나머지 개별 속성은 auto  */
+  /* overflow-y: auto; */
+
+  /* opacity -> 하위 요소에 상속*/
+  opacity: 0.5;
+
+  /* 상속안되려면 rgba속성값으로 투명값 설정 */
+  /* background-color: rgba(2, 255, 255, 0.2); */
+}
+
+.parent *{
+  width: 400px;
+  height: 400px;
+  margin: 10px;
+  box-sizing: border-box;
+  transition: 1s;
+}
+
+.parent *:active{
+  opacity: 1;
+  filter: alpha(opacity=50);
+  zoom: 1;
+  width: 100px;
+}
+
+/* block - div */
+.parent :nth-child(1){
+  background-color: red;
+}
+
+/* inline - span */
+.parent :nth-child(2){
+  background-color: green;
+
+  /* inline to block */
+  display: block;
+}
+
+/* inline-block - input */
+.parent :nth-child(3){
+  background-color: yellow;
+}
