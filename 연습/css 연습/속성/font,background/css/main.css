@@ -1,0 +1,26 @@
+body {
+  height: 3000px;
+}
+
+div {
+  height: 500px;
+  margin: 30px;
+  /* background */
+  background-image: url("https://i2.wp.com/www.sakaya.com.my/wp-content/uploads/2020/06/2-81.png?fit=600%2C600&ssl=1");
+  background-attachment: fixed;
+}
+
+div:not(.for_comparing){
+  /* font */
+  color: chartreuse;
+  font-size: 100px;
+  font-weight: 700;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: 10px 20px;
+  text-decoration: underline;
+  
+  /* background */
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
