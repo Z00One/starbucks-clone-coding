@@ -12,7 +12,7 @@
   width: 100px;
   height: 100px;
 
-  /* absolute - set relative parent as standard
+  /* absolute - set parent as standard
   if no ancestors who has property of position - set viewport as standard */
   position: absolute;
   right: 100px;
