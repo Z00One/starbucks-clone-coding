@@ -1,0 +1,66 @@
+/* set flex-containers */
+.flex-containers{
+  margin: 10px;
+  display: flex
+}
+
+.flex-containers:nth-child(1){
+  background-color: blanchedalmond;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.flex-containers:nth-child(2){
+  background-color: chartreuse;
+  display: inline-flex;
+}
+
+/* set container */
+.flex-containers:nth-child(1) > .container{
+  display: flex;
+  margin: 5px;
+}
+
+.flex-containers:nth-child(2) > .container{
+  display: inline-flex;
+  margin: 5px;
+}
+
+.container:nth-child(1){
+  flex-direction: row;
+}
+
+.container:nth-child(2){
+  flex-direction: row-reverse;
+}
+
+.container:nth-child(3){
+  flex-direction: column;
+}
+
+.container:nth-child(4){
+  flex-direction: column-reverse;
+}
+
+/* set items */
+.container > div{
+  width: 100px;
+  height: 100px;
+  border: 5px dashed salmon;
+}
+
+.container > div:nth-child(1){
+  background-color: red;
+}
+
+.container > div:nth-child(2){
+  background-color: blue
+}
+
+.container > div:nth-child(3){
+  background-color: green
+}
+
+.container > div:nth-child(4){
+  background-color: gold
+}

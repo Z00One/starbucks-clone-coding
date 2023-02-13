@@ -1,0 +1,63 @@
+.container{
+  width: 550px;
+  background-color: blanchedalmond;
+  position: relative;
+}
+
+.container div{
+  border: 10px solid seagreen;
+  background-color: greenyellow;
+}
+
+.container :nth-child(1){
+  width: 100px;
+  height: 100px;
+
+  /* absolute - set parent as standard
+  if no ancestors who has property of position - set viewport as standard
+  ++ change value of display to block */
+  
+  position: absolute;
+  right: 100px;
+  bottom: 100px;
+}
+
+.container :nth-child(2){
+  width: 200px;
+  height: 100px;
+}
+
+.container :nth-child(3){
+  width: 100px;
+  height: 200px;
+
+    /* relative - set oneself as standard */
+  position: relative;
+  top: 20px;
+  left: 50px;
+}
+
+.container :nth-child(4){
+  width: 100px;
+  height: 100px;
+  position: relative;
+
+  /* stack order
+  1. property of position
+  2. property of z-index
+  3. order that attribute is written */
+  z-index: 1;
+}
+
+.container :nth-child(5){
+  width: 100px;
+  height: 100px;
+
+  /* fixed - set viewport as standard
+  ++ change value of display to block */
+  position: fixed;
+  left: 100px;
+  
+  border: 10px solid seagreen;
+  background-color: greenyellow;
+}
