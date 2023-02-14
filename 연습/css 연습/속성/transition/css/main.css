@@ -1,0 +1,41 @@
+body{
+  display: flex;
+  justify-content: center;
+}
+
+.container{
+  width: 500px;
+  display: flex;
+  background-color: aliceblue;
+}
+
+.container div{
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+  transition:
+    flex-shrink 1s,
+    border-radius .5s;
+  
+}
+
+.container div:hover{
+  flex-shrink: 0;
+  border-radius: 100% 30%;
+}
+
+.container div:focus{
+  border-radius: 30% 100%;
+}
+
+.container div:nth-child(1){
+  background-color: steelblue;
+}
+
+.container div:nth-child(2){
+  background-color: aquamarine;
+}
+
+.container div:nth-child(3){
+  background-color: darkseagreen;
+}
