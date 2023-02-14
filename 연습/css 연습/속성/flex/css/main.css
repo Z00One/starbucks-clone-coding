@@ -7,7 +7,6 @@
 .flex-containers:nth-child(1){
   background-color: blanchedalmond;
   display: flex;
-  flex-direction: row-reverse;
 }
 
 .flex-containers:nth-child(2){
@@ -16,14 +15,23 @@
 }
 
 /* set container */
+.container{
+  width: 300px;
+  margin: 80px;
+  border: 2px solid black;
+}
+
 .flex-containers:nth-child(1) > .container{
   display: flex;
-  margin: 5px;
+  /* flex-wrap: wrap; */
+  /* align-content: center; */
 }
 
 .flex-containers:nth-child(2) > .container{
   display: inline-flex;
-  margin: 5px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 .container:nth-child(1){
@@ -44,9 +52,11 @@
 
 /* set items */
 .container > div{
-  width: 100px;
-  height: 100px;
+  width: 110px;
+  height: 110px;
   border: 5px dashed salmon;
+  text-align: center;
+  box-sizing: border-box;
 }
 
 .container > div:nth-child(1){
@@ -63,4 +73,28 @@
 
 .container > div:nth-child(4){
   background-color: gold
+}
+/* flex-grow, flex-basis, order */
+#grow div{
+  border: 5px solid black;
+  flex-basis: 0;
+}
+
+#grow div:nth-child(1) {
+  order: 1;
+  flex-grow: 1;
+}
+
+#grow div:nth-child(2) {
+  flex-grow: 2;
+}
+
+#grow div:nth-child(3) {
+  order: -1;
+  flex-grow: 1;
+}
+
+/* shrink */
+#shrink div{
+  flex-shrink: 0;
 }
