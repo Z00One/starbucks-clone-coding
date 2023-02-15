@@ -3,12 +3,14 @@ body {
   width: 30vw;
 }
 
+/* flex box */
 .container {
   padding-top: 200px;
   display: flex;
   justify-content: center;
 }
 
+/* flex items */
 .container div{
   width: 100px;
   height: 100px;
@@ -31,6 +33,7 @@ body {
   background-color: black;
 }
 
+/* transform */
 .container div:hover {
   transform: perspective(100px) rotateX(180deg) scale(1.3);
   opacity: 1;
