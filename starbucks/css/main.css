@@ -1,0 +1,18 @@
+div {
+  display: flex;
+  width: 600px;
+  margin: 0 auto;
+  font-size: 100px;
+}
+
+p {
+  color: greenyellow;
+
+  /* Open Ponts License  */
+  font-family: 'Poppins', sans-serif;
+}
+
+.material-icons {
+  /* Parent element value not inherited */
+  font-size: inherit;
+}
