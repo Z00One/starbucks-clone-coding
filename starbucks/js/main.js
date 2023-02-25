@@ -15,7 +15,6 @@ searchInputEl.addEventListener('focus', function () {
 searchInputEl.addEventListener('blur', function () {
   searchEl.classList.remove('focused');
   searchInputEl.setAttribute('placeholder', '');
-
 })
 
 const badgeEl = document.querySelector('header .badges');
@@ -36,3 +35,13 @@ window.addEventListener('scroll', _.throttle(function () {
     });
   }
 }, 300));
+
+const fadeEls = document.querySelectorAll(".visual .fade-in");
+
+// Set the delay value to 0.7 seconds difference for each element
+fadeEls.forEach(function(fadeEl, index) {
+  gsap.to(fadeEl, 1, {
+    opacity: 1,
+    delay: (index + 1) * .7,
+  });
+})
