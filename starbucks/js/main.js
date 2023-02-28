@@ -46,6 +46,7 @@ fadeEls.forEach(function (fadeEl, index) {
   });
 });
 
+// Swiper - Make elements to swiping
 new Swiper('.notice-line .swiper', {
   direction: 'vertical',
   autoplay: true,
@@ -54,13 +55,13 @@ new Swiper('.notice-line .swiper', {
 
 new Swiper('.promotion .swiper', {
   // direction: 'horizontal', -> default value
-  slidesPerView: 3,
-  spaceBetween: 10,
-  centeredSlides: true,
+  slidesPerView: 3,     // number of slides in one time
+  spaceBetween: 10,     // distance between slides
+  centeredSlides: true, // location of the main slide
   loop: true,
-  // autoplay: {
-  //   delay: 5000 // 5000ms
-  // }
+  autoplay: {
+    delay: 5000         // 5000ms
+  },
   pagination: {
     el: '.promotion .swiper-pagination',
     clickable: true
@@ -75,6 +76,7 @@ new Swiper('.promotion .swiper', {
 const promotionEl = document.querySelector('.promotion');
 const promotionToggleBtn = document.querySelector('.toggle-promotion');
 let isHidePromotion = false;
+
 promotionToggleBtn.addEventListener('click', function () {
   isHidePromotion = !isHidePromotion
   if (isHidePromotion) {
@@ -84,3 +86,23 @@ promotionToggleBtn.addEventListener('click', function () {
     promotionEl.classList.remove('hide');
   }
 });
+
+function random(min, max) {
+  return parseFloat((Math.random() * (max - min) + min).toFixed(2))
+}
+
+function floatingObject(selector, delay, size) {
+  gsap.to(selector,               // select element
+    random(1.5, 2.5),             // animation action time
+    { // 옵션
+      y: size,                    // move along the y-axis
+      repeat: -1,                 // repeat -> -1
+      yoyo: true,                 // move to original position
+      ease: Power1.easeInOut,     // gsap - easing
+      delay: random(0, delay)
+    })
+}
+
+floatingObject('.floating1', 1, 15)
+floatingObject('.floating2', .5, 15)
+floatingObject('.floating3', 1.5, 20)
