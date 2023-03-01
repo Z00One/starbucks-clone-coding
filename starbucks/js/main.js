@@ -72,6 +72,16 @@ new Swiper('.promotion .swiper', {
   }
 })
 
+new Swiper('.awards .swiper', {
+  autoplay: true,
+  loop: true,
+  slidesPerView: 5,
+  spaceBetween: 30,     
+  navigation: {
+    prevEl: '.awards .swiper-prev',
+    nextEl: '.awards .swiper-next'
+  }
+})
 
 const promotionEl = document.querySelector('.promotion');
 const promotionToggleBtn = document.querySelector('.toggle-promotion');
@@ -89,7 +99,7 @@ promotionToggleBtn.addEventListener('click', function () {
 
 function random(min, max) {
   return parseFloat((Math.random() * (max - min) + min).toFixed(2))
-}
+};
 
 function floatingObject(selector, delay, size) {
   gsap.to(selector,               // select element
@@ -100,9 +110,23 @@ function floatingObject(selector, delay, size) {
       yoyo: true,                 // move to original position
       ease: Power1.easeInOut,     // gsap - easing
       delay: random(0, delay)
-    })
-}
+    });
+};
 
-floatingObject('.floating1', 1, 15)
-floatingObject('.floating2', .5, 15)
-floatingObject('.floating3', 1.5, 20)
+floatingObject('.floating1', 1, 15);
+floatingObject('.floating2', .5, 15);
+floatingObject('.floating3', 1.5, 20);
+
+
+const spyEls = document.querySelectorAll('section.scroll-spy');
+
+const controller = new ScrollMagic.Controller();
+spyEls.forEach(function(spyEl) {
+  new ScrollMagic
+    .Scene({
+      triggerElement: spyEl,                // Specifies the element to monitor
+      triggerHook: .8                       // The part where monitoring starts based on the viewport height (0 ~ 1)
+    })
+    .setClassToggle(spyEl, 'show')          // Add 'show' class to monitored spyEl
+    .addTo(controller);   //
+});
