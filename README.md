@@ -1,5 +1,6 @@
+ [![Netlify Status](https://api.netlify.com/api/v1/badges/9f2f756f-e1fc-48d9-9c07-b7d7433d8aaa/deploy-status)](https://app.netlify.com/sites/monumental-pothos-7a99f6/deploys) 
+
 # ☕ Starbucks Clone Coding
- [![Netlify Status](https://api.netlify.com/api/v1/badges/9f2f756f-e1fc-48d9-9c07-b7d7433d8aaa/deploy-status)](https://app.netlify.com/sites/monumental-pothos-7a99f6/deploys)
 
 [DEMO](https://monumental-pothos-7a99f6.netlify.app/) <br/>
 
